@@ -16,3 +16,9 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+@layer components{
+  .btn {
+    @apply px-4 py-2 bg-blue-500 text-white rounded-md;
+  }
+}

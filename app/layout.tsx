@@ -1,3 +1,6 @@
+import '@/app/ui/global.css';
+import { inter } from '@/app/ui/fonts';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      {/* 
+        We can now trickle-down the Inter font throughout the app; antialiased is a tailwind
+        class that smooths out the font
+       */}
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
